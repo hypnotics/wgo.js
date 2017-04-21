@@ -65,5 +65,8 @@ WGo.i18n[WGo.lang] = {
   'tsumego-doubtful': 'Det finns en bättre lösning! Försök igen.',
   'tsumego-interesting': 'Rätt lösning, men det finns ett bättre drag.',
   'tsumego-correct': 'Du har löst det!',
-  'tsumego-unknown': 'Okänt drag - förmodligen fel.'
+  'tsumego-unknown': 'Okänt drag - förmodligen fel.',
+  'tsumego-retry': 'Börja om',
+  'tsumego-undo': 'Ångra',
+  'tsumego-hint': 'Hint'
 }

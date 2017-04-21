@@ -154,7 +154,7 @@
             try {
               _this.kifuReader.next(0)
               _this.update()
-            }					catch (err) {
+            }	catch (err) {
               console.log(err)
               _this.error(err)
               return
@@ -170,7 +170,7 @@
             }
           }
         }, this.config.answerDelay)
-      }		else if (this.kifuReader.node.children.length == 0) {
+      }	else if (this.kifuReader.node.children.length == 0) {
         this.dispatchEvent({
           type: 'variationEnd',
           target: this,
@@ -256,7 +256,7 @@
 
     this.resetButton = document.createElement('button')
     this.resetButton.className = 'wgo-tsumego-btn'
-    this.resetButton.innerHTML = 'Retry'
+    this.resetButton.innerHTML = WGo.t('tsumego-retry')
     this.resetButton.addEventListener('click', this.reset.bind(this))
     this.resetWrapper.appendChild(this.resetButton)
 
@@ -267,7 +267,7 @@
 
     this.prevButton = document.createElement('button')
     this.prevButton.className = 'wgo-tsumego-btn'
-    this.prevButton.innerHTML = 'Undo'
+    this.prevButton.innerHTML = WGo.t('tsumego-undo')
     this.prevButton.addEventListener('click', this.undo.bind(this))
     this.prevWrapper.appendChild(this.prevButton)
 
@@ -278,7 +278,7 @@
 
     this.hintButton = document.createElement('button')
     this.hintButton.className = 'wgo-tsumego-btn'
-    this.hintButton.innerHTML = 'Hint'
+    this.hintButton.innerHTML = WGo.t('tsumego-hint')
     this.hintButton.addEventListener('click', this.hint.bind(this))
     this.hintWrapper.appendChild(this.hintButton)
   }
@@ -314,7 +314,7 @@
 
   Tsumego.prototype.updateTsumego = function (e) {
     if (e.node.comment) this.setInfo(WGo.filterHTML(e.node.comment))
-    else this.comment.innerHTML = (this.turn == WGo.B ? WGo.t('black') : WGo.t('white') + ' ' + WGo.t('to-play'))
+    else this.comment.innerHTML = ((this.turn == WGo.B ? WGo.t('black') : WGo.t('white')) + ' ' + WGo.t('to-play'))
 
     if (e.node.children.length == 0) this.hintButton.disabled = 'disabled'
     else this.hintButton.disabled = ''
